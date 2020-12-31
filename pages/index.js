@@ -1,14 +1,26 @@
-import Head from 'next/head'
-import styles from '../styles/Home.module.css'
+import Head from 'next/head';
+// import Main from 'next/main';
+// import styles from '../styles/Home.module.css';
+import Header from '../src/components/header';
+import DropDown from '../src/components/dropdown';
+import { Container } from 'react-bootstrap';
 
 export default function Home() {
   return (
-    <div className={styles.container}>
+    <>
       <Head>
         <title>Create Next App</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
+      <Container>
+        <Container fluid>
+          <Header />
+        </Container>
 
+        <DropDown />
+      </Container>
+      {/* <h1>Hello World!</h1> */}
+      {/* 
       <main className={styles.main}>
         <h1 className={styles.title}>
           Welcome to <a href="https://nextjs.org">Next.js!</a>
@@ -59,7 +71,7 @@ export default function Home() {
           Powered by{' '}
           <img src="/vercel.svg" alt="Vercel Logo" className={styles.logo} />
         </a>
-      </footer>
-    </div>
-  )
+      </footer> */}
+    </>
+  );
 }
